@@ -35,7 +35,7 @@ public class ServerUtils {
     @Value("${server.protocol:http}")
     private String protocol;
 
-    @Value("${server.address}")
+    @Value("${server.address:}")
     private String address;
 
     @Value("${server.port}")

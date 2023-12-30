@@ -67,9 +67,9 @@ spring:
   ## davinci datasource config
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://rm-wz9pu73l84tuf6jol.mysql.rds.aliyuncs.com:3306/davinci?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    username: dev_galaxy_user
-    password: T!UZufivkF!5oJq9yx
+    url: jdbc:mysql://${UMER_MYSQL_HOST}:${UMER_MYSQL_PORT}/davinci?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: ${DAVINCI_MYSQL_USER}
+    password: ${DAVINCI_MYSQL_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
     initial-size: 1
     min-idle: 1
@@ -223,17 +223,17 @@ custom-datasource-driver-path: ${DAVINCI3_HOME}/config/datasource_driver.yml
 
 
 server:
-  protocol: http
   port: 8080
+  protocol: http
 
   servlet:
     context-path: /
 
   # Used for mail and download services, can be empty, careful configuration
   # By default, 'server.address' and 'server.port' is used as the string value.
-  # access:
-  #  address:
-  #  port:
+  access:
+    address: davinci.umer.com.cn
+    port: 443
 
 
 ## jwt is one of the important configuration of the application
