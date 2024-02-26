@@ -166,9 +166,9 @@ spring:
 #              avatar: "attributes.Avatar"
 
 
-
-logging:
-  config: file:${DAVINCI3_HOME}/config/logback.xml
+#
+#logging:
+#  config: file:${DAVINCI3_HOME}/config/logback.xml
 
 
 springfox:
@@ -282,7 +282,7 @@ data-auth-center:
       auth-code:
 
 statistic:
-  enable: false
+  enable: true
 
   # You can use external elasticsearch storage [127.0.0.1:9300]
   elastic_urls:
@@ -303,4 +303,5 @@ statistic:
 
 encryption:
   maxEncryptSize: 1024
-  type: Off # Off is to turn off encryption, to enable encryption, please select AES or RSA
+  # Off is to turn off encryption, to enable encryption, please select AES or RSA
+  type: Off

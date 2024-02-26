@@ -167,8 +167,8 @@ spring:
 
 
 
-logging:
-  config: file:${DAVINCI3_HOME}/config/logback.xml
+#logging:
+#  config: file:${DAVINCI3_HOME}/config/logback.xml
 
 
 springfox:
@@ -234,7 +234,9 @@ server:
   # access:
   #  address:
   #  port:
-
+  access:
+    address: localhost
+    port: 80
 
 ## jwt is one of the important configuration of the application
 ## jwt config cannot be null or empty

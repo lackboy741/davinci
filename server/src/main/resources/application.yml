@@ -57,9 +57,9 @@ spring:
   profiles:
     active: prd
 
-
-logging:
-  config: file:${DAVINCI3_HOME}/config/logback.xml
+#废弃原来的日志配置
+#logging:
+#  config: file:${DAVINCI3_HOME}/config/logback.xml
 
 
 springfox:
